@@ -1,0 +1,10 @@
+DR101,Deluxe Room,150.000000,1,,0,
+DR102,Deluxe Room,150.000000,1,,0,
+DR103,Deluxe Room,150.000000,1,,0,
+DR104,Deluxe Room,175.000000,1,,0,
+DR105,Deluxe Room,175.000000,1,,0,
+ST201,Suite,300.000000,1,,0,
+ST202,Suite,300.000000,1,,0,
+ST203,Suite,350.000000,1,,0,
+ST204,Suite,350.000000,1,,0,
+SD301,SuperDeluxe,225.000000,1,,0,Personal Wifi
