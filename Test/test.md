@@ -42,7 +42,7 @@ Backend for a student–business internship marketplace. Stack: Node.js + Expres
 
 Revocation problem solved by the refresh token; the common path stays stateless. OAuth users get issued the same Outtern tokens after callback.
 
-![JWT login and refresh flow](diag_auth.png)
+![JWT login and refresh flow](assests/diag_auth.png)
 *Figure 1 — JWT login and refresh flow*
 
 ### Notes
@@ -64,7 +64,7 @@ RBAC: one role per user, role maps to permissions, checked before acting. ABAC i
 | Admin | + read any profile, verify, run matches, moderate. |
 | Super-admin | + assign roles, delete users, audit logs, config. |
 
-![Role-to-permission mapping](diag_rbac.png)
+![Role-to-permission mapping](assests/diag_rbac.png)
 *Figure 2 — Role-to-permission mapping*
 
 Two layers:
@@ -109,7 +109,7 @@ router.post('/internships', authenticate, requirePermission('internship:rw:own')
 
 One `users` table for login + role. Role-specific data in separate profile tables, 1:1 to `users`. Keeps login uniform, avoids a wide half-empty table.
 
-![ERD](diag_erd.png)
+![ERD](assests/diag_erd.png)
 *Figure 3 — Core schema*
 
 **users**
@@ -167,7 +167,7 @@ Plus `applications` (student ↔ internship + status) and `refresh_tokens` (hash
 
 Versioned REST under `/api/v1`, by resource. Every request runs the same middleware pipeline.
 
-![API pipeline](diag_api.png)
+![API pipeline](assests/diag_api.png)
 *Figure 4 — Layered architecture + request pipeline*
 
 | Endpoint | Method | Purpose |
